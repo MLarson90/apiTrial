@@ -1,4 +1,12 @@
 <h1>
   {{title}}
 </h1>
-<app-weather></app-weather>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#">Home</a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages</a></li>
+  <li id="search">Search Weather by Chity:<app-weather></app-weather></li>
+</ul>
+<button (click)="editButton=!editButton">Add New Project</button>
+<div *ngIf ="editButton"><app-new-project></app-new-project></div>
+<router-outlet></router-outlet>

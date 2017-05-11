@@ -1,5 +1,5 @@
 <div *ngFor="let weath of weathers">
   <p>{{weath.name}}'s current conditions are {{weath.weather[0].description}}</p>
 </div>
-<input #city placeholder="chity">
-<button (click)="addCity(city.value)"></button>
+<input #city placeholder="Chity Name">
+<button (click)="addCity(city.value)">Search</button>

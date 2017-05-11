@@ -1,0 +1,12 @@
+<div class="container">
+  <div *ngFor="let project of projects | async">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h1 class="panel-title" (click)="goToDetailPage(project)">{{project.title}}</h1>
+      </div>
+      <div class="panel-body">
+        <h3>By: {{project.author}}</h3>
+      </div>
+    </div>
+  </div>
+</div>

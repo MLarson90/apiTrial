@@ -1,0 +1,8 @@
+<div class="container">
+
+  <h1>{{(projectToDisplay | async)?.title}}</h1>
+  <h3>{{(projectToDisplay | async)?.author}}</h3>
+  <h4>Total Needed: ${{(projectToDisplay | async)?.amount}}</h4>
+  <h4>Amount Raised: ${{(projectToDisplay | async)?.raised}}</h4>
+  <p>Description{{(projectToDisplay | async)?.description}}</p>
+</div>

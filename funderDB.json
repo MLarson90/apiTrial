@@ -1,0 +1,16 @@
+{
+  "projects":[{
+      "id": 0,
+      "author": "Max Larson",
+      "title": "Code Camp",
+      "description":  "I am trying to raise money to put myself though a coding bootcamp",
+      "amount": 4800,
+      "raised": 0,
+
+      "comments": [{
+        "name": "Steve",
+        "thought": "Dude, no way",
+        "project_id": 0
+          }]
+      }]
+}

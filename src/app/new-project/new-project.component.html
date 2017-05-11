@@ -1,0 +1,13 @@
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <form>
+          <input class="form-control" #newauthor placeholder=" Your Name" required>
+          <input class="form-control" #newtitle placeholder="Title" required>
+          <input class="form-control" #newamount placeholder="Amount needed" required>
+          <textarea rows="5" class="form-control" #newdescription placeholder="Description" required></textarea>
+          <button (click)="submitForm(newamount.value, newauthor.value, newdescription.value, newtitle.value)">Add Project</button>
+        </form>
+      </div>
+    </div>
+  </div>

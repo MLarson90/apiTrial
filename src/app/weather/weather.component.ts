@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WeatherService } from 'app/weather.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-weather',
@@ -9,11 +10,12 @@ import { WeatherService } from 'app/weather.service';
 })
 export class WeatherComponent implements OnInit {
     weathers = [];
-  constructor(private weatherService: WeatherService) { }
+  constructor(private weatherService: WeatherService, private router: Router) { }
 
   ngOnInit() {
   }
   addCity(input){
+    this.weathers = [];
   this.weatherService.getWeather(input).subscribe(
     (data) => this.weathers.push(data)
   );

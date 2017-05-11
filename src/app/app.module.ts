@@ -8,7 +8,10 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 import { weatherApi } from 'app/weatherApiKey';
-import { ApiKeyComponent } from './api-key/api-key.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { routing } from './app.routes';
+import { ProjectDetailComponent } from './project-detail/project-detail.component';
+import { NewProjectComponent } from './new-project/new-project.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -22,12 +25,15 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     WeatherComponent,
-    ApiKeyComponent
+    HomePageComponent,
+    ProjectDetailComponent,
+    NewProjectComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule
   ],
