@@ -21,5 +21,12 @@ export class ProjectDetailComponent implements OnInit {
     });
     this.projectToDisplay = this.weatherService.getProjectById(this.projectId);
   }
-
+  addDonation(value, key, money, amount){
+    if(parseInt(amount) > parseInt(money)){
+    var total = parseInt(money) + parseInt(value);
+    this.weatherService.donate(key, total);
+  }else{
+    alert("Does not need that much!");
+  }
+  }
 }

@@ -25,7 +25,10 @@ export class WeatherService {
   getProjectById(productId: string){
     return this.database.object('projects/' + productId);
   }
-
+  donate(addToProduct ,value){
+    var projectEntry = this.getProjectById(addToProduct);
+    projectEntry.update({raised:value });
+  }
 
   getWeather(input){
     console.log(this.cheese);

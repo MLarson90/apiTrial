@@ -1,8 +1,19 @@
 <div class="container">
-
-  <h1>{{(projectToDisplay | async)?.title}}</h1>
-  <h3>{{(projectToDisplay | async)?.author}}</h3>
-  <h4>Total Needed: ${{(projectToDisplay | async)?.amount}}</h4>
-  <h4>Amount Raised: ${{(projectToDisplay | async)?.raised}}</h4>
-  <p>Description{{(projectToDisplay | async)?.description}}</p>
+  <div class="row">
+    <div class="col-lg-5">
+      <h1>{{(projectToDisplay | async)?.title}}</h1>
+      <h3>{{(projectToDisplay | async)?.author}}</h3>
+      <h4>Total Needed: ${{(projectToDisplay | async)?.amount}}</h4>
+      <h4>Amount Raised: ${{(projectToDisplay | async)?.raised}}</h4>
+      <p>Description{{(projectToDisplay | async)?.description}}</p>
+    </div>
+    <div class="col-lg-5">
+      <h1>Donate</h1>
+      <input #donation placeholder="amount">
+      <input #what value="{{(projectToDisplay | async)?.$key}}" hidden>
+      <input #money value="{{(projectToDisplay | async)?.raised}}" hidden>
+      <input #amount value="{{(projectToDisplay | async)?.amount}}" hidden>
+      <button (click)="addDonation(donation.value, what.value, money.value, amount.value)">Donate</button>
+    </div>
+  </div>
 </div>
